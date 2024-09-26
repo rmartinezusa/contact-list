@@ -5,7 +5,8 @@ import ContactRow from "./ContactRow";
 const URL = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
 
 function ContactList() {
-    const [contacts, setContacts] = useState()
+    
+    const [contacts, setContacts] = useState([])
 
     useEffect(()=>{
         async function fetchContacts() {
