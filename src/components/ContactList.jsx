@@ -4,7 +4,7 @@ import ContactRow from "./ContactRow";
 
 const URL = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
 
-function ContactList() {
+function ContactList({setSelectedContactId}) {
     
     const [contacts, setContacts] = useState([])
 
@@ -37,7 +37,7 @@ function ContactList() {
               <td>Phone</td>
             </tr>
             {
-                contacts.map((contact) => { return <ContactRow key={contact.id} contact={contact} />})
+                contacts.map((contact) => { return <ContactRow key={contact.id} contact={contact} setSelectedContactId={setSelectedContactId} />})
             }
           </tbody>
         </table>
