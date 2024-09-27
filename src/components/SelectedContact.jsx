@@ -24,11 +24,6 @@ function SelectedContact({selectedContactId, setSelectedContactId, URL}) {
         getContact();
     },[selectedContactId]);
 
-    console.log(contact.address);
-
-    const address = contact.address ? `${contact.address.street}, ${contact.address.city}, ${contact.address.zipcode}` : 'No address available';
-
-
     return (
         <ul>
             <li>Name: {contact.name}</li>
