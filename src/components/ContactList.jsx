@@ -22,17 +22,17 @@ function ContactList({setSelectedContactId, URL}) {
     },[])
 
     return (
-        <table>
+        <table className="contactTable">
           <thead>
             <tr>
-              <th colSpan="3">Contact List</th>
+              <th colSpan="3"><h2>Contact List</h2></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Name</td>
-              <td>Email</td>
-              <td>Phone</td>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
             </tr>
             {
                 contacts.map((contact) => { return <ContactRow key={contact.id} contact={contact} setSelectedContactId={setSelectedContactId} />})

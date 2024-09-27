@@ -25,23 +25,24 @@ function SelectedContact({selectedContactId, setSelectedContactId, URL}) {
     },[selectedContactId]);
 
     return (
-        <ul>
-            <li>Name: {contact.name}</li>
-            <li>Username: {contact.username}</li>
-            <li>Email: {contact.email}</li>
-            <li>Phone: {contact.phone}</li>
-            <li>Website: {contact.website}</li>
+        <ul className="contactUl">
+            <h2>Contact Information</h2>
+            <li><span>Name:</span> {contact.name}</li>
+            <li><span>Username:</span> {contact.username}</li>
+            <li><span>Email:</span> {contact.email}</li>
+            <li><span>Phone:</span> {contact.phone}</li>
+            <li><span>Website:</span> {contact.website}</li>
             
             {contact.address && (
                 <>
-                    <li>Street: {contact.address.street || 'N/A'}</li>
-                    <li>Suite: {contact.address.suite || 'N/A'}</li>
-                    <li>City: {contact.address.city || 'N/A'}</li>
-                    <li>Zipcode: {contact.address.zipcode || 'N/A'}</li>
+                    <li><span>Street:</span> {contact.address.street || 'N/A'}</li>
+                    <li><span>Suite:</span> {contact.address.suite || 'N/A'}</li>
+                    <li><span>City:</span> {contact.address.city || 'N/A'}</li>
+                    <li><span>Zipcode:</span> {contact.address.zipcode || 'N/A'}</li>
                     {contact.address.geo && (
                         <>
-                            <li>Latitude: {contact.address.geo.lat || 'N/A'}</li>
-                            <li>Longitude: {contact.address.geo.lng || 'N/A'}</li>
+                            <li><span>Latitude:</span> {contact.address.geo.lat || 'N/A'}</li>
+                            <li><span>Longitude:</span> {contact.address.geo.lng || 'N/A'}</li>
                         </>
                     )}
                 </>
@@ -49,13 +50,13 @@ function SelectedContact({selectedContactId, setSelectedContactId, URL}) {
             
             {contact.company && (
                 <>
-                    <li>Company Name: {contact.company.name || 'N/A'}</li>
-                    <li>Catchphrase: {contact.company.catchPhrase || 'N/A'}</li>
-                    <li>Business: {contact.company.bs || 'N/A'}</li>
+                    <li><span>Company Name:</span> {contact.company.name || 'N/A'}</li>
+                    <li><span>Catchphrase:</span> {contact.company.catchPhrase || 'N/A'}</li>
+                    <li><span>Business:</span> {contact.company.bs || 'N/A'}</li>
                 </>
             )}
 
-            <li><button onClick={() => {setSelectedContactId(null)}}>Return</button></li>
+            <button onClick={() => {setSelectedContactId(null)}}>Return</button>
         </ul>
     );
 }
