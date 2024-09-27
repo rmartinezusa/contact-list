@@ -2,9 +2,7 @@
 import { useState, useEffect } from "react";
 import ContactRow from "./ContactRow"; 
 
-const URL = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
-
-function ContactList({setSelectedContactId}) {
+function ContactList({setSelectedContactId, URL}) {
     
     const [contacts, setContacts] = useState([])
 
